@@ -1,13 +1,27 @@
 <h1>당신이 입력한 텍스트는
-    {{total}}로 구성되어 있습니다</h1>
+    {{total}}개로 구성되어 있습니다</h1>
 
 <a href="{% url 'home' %}">다시 하기</a>
 <br>
-<h2>입력한 텍스트 : </h2>
-{{full}}
-<h2>단어 카운트 : </h2>
-{% for word, howmany in dictionary %}
 
-{{word}} : {{howmany}}
-<br>
-{%endfor%}
+<h2>입력한 텍스트 : </h2>
+<p>
+    {{full}}
+</p>
+<h2>단어 카운트 : </h2>
+<p>
+    {% for word, howmany in dictionary %}
+
+    {{word}} : {{howmany}}개
+    <br>
+    {%endfor%}
+</p>
+<h2>숫자 카운트 : </h2>
+<p>
+    숫자 : {{digit}}개
+</p>
+
+<h2>문자 카운트 : </h2>
+<p>
+    문자 : {{digit}}개
+</p>
